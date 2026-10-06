@@ -1,75 +1,20 @@
-# Nuxt Minimal Starter
+# 特別護士 Elite Care 官網
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt 4 單頁靜態網站（繁體中文、RWD）。
 
-## Setup
+## 修改內容
 
-Make sure to install dependencies:
+所有文案、聯絡方式、照片路徑與選配開關都集中在 `app/content.ts`：
+
+- `contact.phone` / `contact.lineUrl`：電話與 LINE 加好友連結（待業主提供）
+- `images`：照片放進 `public/images/` 後填入路徑，未填時顯示佔位區塊
+- `settings.heroLayout`：`'split'`（預設）或 `'centered'`
+- `settings.showComparison` / `settings.showSpecialFees`：顯示或隱藏比較表、特殊收費
+
+## 指令
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev        # http://localhost:3000
+npm run generate   # 輸出靜態網站到 .output/public
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
